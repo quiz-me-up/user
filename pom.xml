@@ -6,7 +6,7 @@
 
     <packaging>pom</packaging>
     <artifactId>user</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1-SNAPSHOT</version>
     <groupId>io.github.quizmeup</groupId>
 
     <distributionManagement>
