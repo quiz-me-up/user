@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: user-application
-  cloud:
-    config:
-      name: user-application, mongo, rabbit, swagger
-      uri: http://localhost:1000/configuration
-      fail-fast: true
