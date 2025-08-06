@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!gh-pages'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      QUIZ_ME_UP_GITHUB_TOKEN: ${{ secrets.QUIZ_ME_UP_GITHUB_TOKEN }}
+    steps:
+      - name: Checkout project directory
+        uses: actions/checkout@v4
+
+      - name: Setup java-maven
+        uses: quiz-me-up/reusable-workflow/.github/actions/setup-java-maven@master
+
+      - name: Maven command execution
+        run: mvn clean install
